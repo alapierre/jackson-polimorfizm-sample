@@ -2,6 +2,7 @@ package io.alapierre.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.val;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -42,6 +43,8 @@ public class TestPolimorfizm {
 
         System.out.println(res.getClass().getSimpleName());
 
+        Assertions.assertInstanceOf(CurrencyInvoiceCreateDto.class,res);
+
     }
 
     @Test
@@ -59,6 +62,7 @@ public class TestPolimorfizm {
 
         System.out.println(res.getClass().getSimpleName());
 
+        Assertions.assertInstanceOf(SalesInvoiceCreateDto.class,res);
     }
 
 }
